@@ -1,0 +1,16 @@
+name: Despliegue hacia Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  despliegue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{secrets.FIREBASE_SERVICE_ACCOUNT_SERGIO_GARCIA_LOPEZ }}"
+          projectId: sergio-garcia-lopez
+          channelId: live
