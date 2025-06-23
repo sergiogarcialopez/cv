@@ -8,6 +8,7 @@
     <style>
         body {
             text-align: justify;
+            margin-right: 3em;
         }
 
         img {
@@ -37,8 +38,8 @@
             <ul>
                 <li>Comando: <i>brew install github</i></li>
             </ul>
-            <img src="../img/github_desktop_configuration.png">
         </li>
+        <img src="../img/github_desktop_configuration.png">
         <li>
             Una vez configurado <i>GitHub Desktop</i> y especificado el directorio local del repositorio, a saber: <a
                 href="/Users/ss/Documents/GitHub/cv">/Users/ss/Documents/GitHub/cv</a>; copiamos todo contenido en la
@@ -46,16 +47,21 @@
             pegamos en el directorio local del repositorio, valga la redundancia: <a
                 href="/Users/ss/Documents/GitHub/cv">/Users/ss/Documents/GitHub/cv</a>. Los cambios son detectados en
             automático y es posible hacer <i>commit</i>:</li>
-        <img src="../img/github_desktop_cambios-detectados.png">
         </li>
+        <img src="../img/github_desktop_cambios-detectados.png">
         <li>
             Previo a realizar el primer <i>commit</i> y como requisito para cualquier operación involucrada en el proceso de integración/despliegue continuos, es necesario:
             <ul>
                 <li>Disponer de cuenta <i>Firebase</i> y crear un proyecto <i>Firebase</i> el cual incluye de manera predeterminada un servidor web de recursos estáticos que dará al archivo HTML disponibilidad vía Internet</li>
-                <li>Configurar <i>Firebase Hosting</i> en el repositorio local. <a href="https://firebase.google.com/docs/hosting/github-integration">Véase la documentación sobre el comando <i>firebase init hosting</i></a></li>
-                <li>Configurar <i>GitHub Actions</i> con el usuario y contraseña/clave para la carga del contenido del repositorio en el servidor web de recursos estáticos de <i>Firebase</i>. <a href="https://github.com/marketplace/actions/deploy-to-firebase-hosting">Véase la documentación sobre el <i>GitHub Action</i> para el despliegue hacia <i>Firebase Hosting</i></a></li>
+                <li>Disponer de la herramienta de línea de comandos <i>Firebase</i>, iniciar sesión con el comando <i>firebase login</i> y configurar <i>Firebase Hosting</i> en la ruta del repositorio local. <a href="https://firebase.google.com/docs/hosting/github-integration">Véase la documentación sobre el comando <i>firebase init hosting:github</i></a></li>
+                <li>Una vez asociado <i>Firebase Hosting</i> con la cuenta de GitHub se ha cargado la variable <i>secret</i> en la configuración del respositorio en <i>GitHub</i> con la cuenta JSON encriptada que habilita la carga del contenido del repositorio en el servidor web de recursos estáticos de <i>Firebase</i>. <a href="https://github.com/marketplace/actions/deploy-to-firebase-hosting">Véase la documentación sobre el <i>GitHub Action</i> para el despliegue hacia <i>Firebase Hosting</i></a></li>
             </ul>
         </li>
+        <img src="../img/github_secret_firebase-hosting.png">
+        <li>
+            Una vez creado el <i>GitHub Action</i> disponible en el repositorio con el nombre <a href="https://github.com/sergiogarcialopez/cv/blob/main/.github/workflows/deploy.yml">deploy.yml</a>, después de cada <i>commit</i> se actualizará la presente página web prescindiendo de llamar al comando <i>deploy</i> de <i>Firebase</i> cada vez que existen cambios, además, integrando la utilización de los comandos de las herramientas <i>Git</i> y <i>Firebase</i> en una sola acción i.e. el <i>commit</i> desde el entorno gráfico <i>GitHub Desktop</i>:
+        </li>
+        <img src="../img/github_website_screenshot.png">
     </ol>
 </body>
 
