@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</title>
+    <meta name="color-scheme" content="light dark" />
+    <style>
+        body {
+            text-align: justify;
+        }
+
+        img {
+            width: 35em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</h1>
+    <ol>
+        <li>
+            A partir de una página web codificada en archivo HTML y de un repositorio de <i>GitHub</i> para su
+            almacenamiento
+            <ol>
+                <li>Disponer de un archivo HTML</li>
+                <li>Disponer de una cuenta <i>GitHub</i></li>
+                <li>Crear el repositorio <i>GitHub</i> que almacenará el archivo HTML</li>
+            </ol>
+        </li>
+        <li>
+            Se prescinde de <i>Git</i> como herramienta de línea de comandos pues el equipo actual imposibilita su
+            instalación dada la actual incapacidad en tamaño disponible en el disco para su instalación a través de las
+            herramientas de Xcode (20 GB necesarios) y debido a la incompatibilidad del administrador de paquetes
+            <i>Homebrew</i> con la versión actual de MacOS.<br>Por tanto, se hará uso de la integración de <i>Git</i>
+            desde la aplicación <i>GitHub Desktop</i>:
+            <ul>
+                <li>Comando: <i>brew install github</i></li>
+            </ul>
+            <img src="../img/github_desktop_configuration.png">
+        </li>
+        <li>
+            Una vez configurado <i>GitHub Desktop</i> y especificado el directorio local del repositorio, a saber: <a
+                href="/Users/ss/Documents/GitHub/cv">/Users/ss/Documents/GitHub/cv</a>; copiamos todo contenido en la
+            ruta local <a href="/Users/ss/CV">/Users/ss/CV</a> o directorio fuente (que incluye el archivo HTML) y lo
+            pegamos en el directorio local del repositorio, valga la redundancia: <a
+                href="/Users/ss/Documents/GitHub/cv">/Users/ss/Documents/GitHub/cv</a>. Los cambios son detectados en
+            automático y es posible hacer <i>commit</i>:</li>
+        <img src="../img/github_desktop_cambios-detectados.png">
+        </li>
+        <li>
+            Previo a realizar el primer <i>commit</i> y como requisito para cualquier operación involucrada en el proceso de integración/despliegue continuos, es necesario:
+            <ul>
+                <li>Disponer de cuenta <i>Firebase</i> y crear un proyecto <i>Firebase</i> el cual incluye de manera predeterminada un servidor web de recursos estáticos que dará al archivo HTML disponibilidad vía Internet</li>
+                <li>Configurar <i>Firebase Hosting</i> en el repositorio local. <a href="https://firebase.google.com/docs/hosting/github-integration">Véase la documentación sobre el comando <i>firebase init hosting</i></a></li>
+                <li>Configurar <i>GitHub Actions</i> con el usuario y contraseña/clave para la carga del contenido del repositorio en el servidor web de recursos estáticos de <i>Firebase</i>. <a href="https://github.com/marketplace/actions/deploy-to-firebase-hosting">Véase la documentación sobre el <i>GitHub Action</i> para el despliegue hacia <i>Firebase Hosting</i></a></li>
+            </ul>
+        </li>
+    </ol>
+</body>
+
+</html>
