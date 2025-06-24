@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <title>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</title>
     <meta name="color-scheme" content="light dark" />
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" type="text/css" href="./../estilos.css">
+    <!-- Ícono. Fuente: https://www.favicon.cc/?action=icon&file_id=783816 -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAJTwYAAgL6ABxusAAt91gABscTAAf6BwAMSXoABYH1AA142wDy8voA9/r8AAAAAAAAAAAAAAAAAAAAAAAAAAAAVVVZmZmRERFVVVmZmZEREVVVWjMzoRERVVVTl3kxERFVVVkAAJEREVVVUERmARERVVVUeXmRERFVVVSneiEREVVVVCIiIRERVVVYIiqRERFVVVkqqpEREVVVWaqqkRERVVVZmZmRERFVVVmZmZEREVVVWZmZkRERVVVZmZmREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon">
+    <!-- Estilo de las imágenes exclusivo para el presente archivo HTML o apartado tipo artículo, documentación, etc. -->
     <style>
-        body {
-            text-align: justify;
-            margin-right: 3em;
-        }
-
         img {
             width: 35em;
         }
     </style>
+    <!-- ENCABEZADO a.k.a contenido en la etiqueta Header -->
+    <!-- Icóno de Menú. Fuente: API de Google Fonts - Material Symbols and Icons. Fuente: https://developers.google.com/fonts/docs/material_symbols?hl=es-419-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-
 <body>
-    <h1>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</h1>
+    <!-- ENCABEZADO -->
+     <header>
+        <!-- Íconos de la API de Google Fonts - Material Symbols and Icons -->
+        <button type="button" onclick="window.history.go(-1)">
+            <span class="material-symbols-outlined">home</span>
+        </button>
+        <h1>Sergio García López</h1>
+    </header>
+    
+    <h2>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</h2>
     <ol>
         <li>
             A partir de una página web codificada en archivo HTML y de un repositorio de <i>GitHub</i> para su
