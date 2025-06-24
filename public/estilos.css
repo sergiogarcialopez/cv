@@ -1,6 +1,6 @@
 /* -- VARIABLES -- */
 :root {
-    --margen-texto: 20px;
+    --margen-texto: 2em;
     --color-primario: #007bff;
     --color-secundario: #6c757d;
     --color-de-fondo-claro: #ffffff;
@@ -14,7 +14,28 @@
 }
 
 /* -- FONDO -- */
-/* html {
+/* .fondo {
+    background-color: var(--color-de-fondo-encabezado-claro);
+}
+@media (prefers-color-scheme: dark) {
+    .fondo {
+        background-color: var(--color-de-fondo-encabezado-oscuro);
+    }
+}
+#top, #bottom {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+}
+#top {
+    y: -10%;
+}
+#bottom {
+    y: 100%;
+} */
+/* 
+<!-- Fondo de la página simulado pues el comportamiento del elemento HTML varía si es archivo HTML es local o remoto -->
+html {
     background-color: var(--color-de-fondo-encabezado-claro);
 }
 @media (prefers-color-scheme: dark) {
