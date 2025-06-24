@@ -54,6 +54,14 @@ body {
     color: var(--color-de-texto-claro);
     background-color: var(--color-de-fondo-claro);
 }
+.contenido {
+    /* width: 100%; */
+    margin: 0 auto;
+    padding: 3vw;
+    /* margin-left: 5vw; */
+    /* background-color: yellowgreen; */
+    /* margin-right: 5vw; */
+}
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -147,8 +155,8 @@ h3, h4 {
     margin-bottom: 1rem;
     text-align: justify;
     color: var(--color-primario);
-    margin-left: var(--margen-texto);
-    margin-right: var(--margen-texto);
+    /* margin-left: var(--margen-texto); */
+    /* margin-right: var(--margen-texto); */
     font-family: var(--fuente-encabezados);
 }
 
@@ -168,14 +176,14 @@ h4 {
 /* -- LISTAS -- */
 ul,
 ol {
-    margin-left: var(--margen-texto);
+    /* margin-left: var(--margen-texto); */
     /* margin-right: var(--margen-texto); */
     margin-bottom: 1rem;
 }
 
 li {
     /* margin-right: var(--margen-texto); */
-    margin-left: var(--margen-texto);
+    /* margin-left: var(--margen-texto); */
     margin-bottom: 0.5rem;
     font-family: var(--fuente-cuerpo);
     text-align: justify;
