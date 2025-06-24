@@ -3,15 +3,204 @@
 <head>
     <meta charset="UTF-8" />
     <title>Sergio García López</title>
+    <meta name="color-scheme" content="light dark" />
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" type="text/css" href="./estilos.css">
+    <!-- Ícono. Fuente: https://www.favicon.cc/?action=icon&file_id=783816 -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAJTwYAAgL6ABxusAAt91gABscTAAf6BwAMSXoABYH1AA142wDy8voA9/r8AAAAAAAAAAAAAAAAAAAAAAAAAAAAVVVZmZmRERFVVVmZmZEREVVVWjMzoRERVVVTl3kxERFVVVkAAJEREVVVUERmARERVVVUeXmRERFVVVSneiEREVVVVCIiIRERVVVYIiqRERFVVVkqqpEREVVVWaqqkRERVVVZmZmRERFVVVmZmZEREVVVWZmZkRERVVVZmZmREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon">
+    <!-- ENCABEZADO a.k.a contenido en la etiqueta Header -->
+    <!-- Icóno de Menú. Fuente: API de Google Fonts - Material Symbols and Icons. Fuente: https://developers.google.com/fonts/docs/material_symbols?hl=es-419-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- JavaScript para la animación de los íconos en los botones del encabezado -->
+    <script type="text/javascript" src="header-botones.js"></script>
+
+    <!-- LÍNEA DE TIEMPO. Fuente: API de GoogleChart de visualización de datos -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- JavaScript de Línea de tiempo acerca de Curriculum Vitae SCRIPT -->
+    <script type="text/javascript" src="linea-de-tiempo.js"></script>
+    
+    <!-- JavaScript de Left Drawer -->
+    <script type="text/javascript" src="left-drawer.js"></script>
 </head>
 <body>
-    <h1>
+    <!-- ENCABEZADO -->
+    <header id="encabezado">
+        <!-- Íconos de la API de Google Fonts - Material Symbols and Icons -->
+        <button type="button" onclick="openLeftDrawer()">
+            <span id="icon-header-button-open-left-drawer" class="material-symbols-outlined">menu</span>
+        </button>
+        <h1>Sergio García López</h1>
+        <!-- TO DO -->
+        <!-- <button type="button">
+            <span class="material-symbols-outlined">search</span>
+        </button>
+        <button type="button">
+            <span class="material-symbols-outlined">settings</span>
+        </button>
+        <button type="button">
+            <span class="material-symbols-outlined">favorite</span>
+        </button> -->
+    </header>
+        
+    <!-- LEFT DRAWER -->
+    <div id="left-drawer">
+        <p>Índice</p>
+        <ul>
+            <li><a href="#cv">CV u Hoja de vida</a></li>
+            <li><a href="#enlaces">Enlaces</a></li>
+            <li><a href="#stack">Tecnologías que hacen posible esta página</a></li>
+            <li><a href="#ci_cd">Flujo CI/CD que hace posible la actualización continua de esta página</a></li>
+        </ul>    
+    </div>
+
+    <!-- ÍNDICE -->
+    <h2>
         Índice
-    </h1>
-    <h2>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</h2>
+    </h2>
+    <ul>
+        <li><a href="#cv">CV u Hoja de vida</a></li>
+        <li><a href="#enlaces">Enlaces</a></li>
+        <li><a href="#stack">Tecnologías que hacen posible esta página</a></li>
+        <li><a href="#ci_cd">Flujo CI/CD que hace posible la actualización continua de esta página</a></li>
+    </ul>
+
+    <!-- CV -->
+    <a style="visibility: collapse;" name="cv"></a>
+    <h3>CV u Hoja de vida</h3>
+    <p style="text-align: end;"><a href="https://drive.google.com/file/d/1CfIBO1ltXv5Qyk27TXAppaa3ktv9u8pJ/view?usp=sharing">Ver CV como documento PDF</a></p>
+    
+    <h4>Experiencia</h4>
+    <ol>
+        <li value="2022"><strong>Proyecto personal<br><i>Desarrollo de aplicación Android para educación musical</strong></i><br>diseñé aplicación móvil para sistema operativo Android que sirve de biblioteca de acordes y escalas musicales; con funciones de búsqueda, almacenamiento de favoritos del usuario e integración del servicio Google AdMob de publicidad móvil. Programé modelos lógicos y controladores en lenguajes de programación Kotlin y Java. Codifiqué la interfaz de usuario en lenguaje de marcado XML. Dibujé los recursos visuales para su promoción en las tiendas de aplicaciones con aplicación de dibujo tridimensional Blender y automaticé con lenguaje de programación Kotlin la traducción de textos para 9 idiomas para su inserción como texto en las imágenes promocionales. Publiqué la aplicación en tiendas de aplicaciones de Amazon y Google:
+        </li>
+    </ol>
+    <ul>
+        <li>Tienda de aplicaciones de Amazon: <a
+                href="https://www.amazon.com.mx/Acordes-Guitarra-Guitar-Chords-2022/dp/B09VK51WXB">https://www.amazon.com.mx/Acordes-Guitarra-Guitar-Chords-2022/dp/B09VK51WXB</a>
+        </li>
+        <li>Tienda de aplicaciones de Google:<ul>
+                <li>Alemán: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=de">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=de</a>
+                </li>
+                <li>Danés: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=da">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=da</a>
+                </li>
+                <li>Español: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=es">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=es</a>
+                </li>
+                <li>Francés: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=fr">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=fr</a>
+                </li>
+                <li>Inglés: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords</a>
+                </li>
+                <li>Italiano: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=it">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=it</a>
+                </li>
+                <li>Neerlandés: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=nl">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=nl</a>
+                </li>
+                <li>Noruego: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=no">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=no</a>
+                </li>
+                <li>Portugués: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=pt">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=pt</a>
+                </li>
+                <li>Ruso: <a
+                        href="https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=ru">https://play.google.com/store/apps/details?id=com.anacrouse.guitarchords&hl=ru</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ol>
+        <li value="2023"><strong>Asistencia a familiar que labora en imprenta<br><i>Desarrollo de macro para proceso de diseño digital</strong></i><br>programé macro para software de diseño gráfico Corel Draw con lenguaje de programación Visual Basic for Applications que automatiza el proceso de imposición de páginas en pliegos i.e. programación de secuencia de las acciones abrir archivo y cortar, pegar, trasladar, rotar y escalar objetos del modelo lógico de Corel</li>
+    </ol>
+    <h4>Educación</h4>
+    <ol>
+        <li value="2014"><strong>Diplomado <i>Photoshop Nivel Avanzado</strong> con Adobe Photoshop</i><br>impartido por el <i>Instituto de Capacitación de la Industria de la Construcción</i> (ICIC) cuyas instalaciones se encuentran en la <i>Cámara Mexicana de la Industria de la Construcción</i> (CMIC) sede Chilpancingo de los Bravo, Estado de Guerrero, México. 
+            <a href="https://drive.google.com/file/d/17I8ri3ow3cTnuC_bFHvPxSwBchQXftkx/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2014"><strong>Diplomado <i>Diseño de Páginas Web</strong> con Adobe Dreamweaver</i><br>impartido por el <i>Instituto de Capacitación de la Industria de la Construcción</i> (ICIC) cuyas instalaciones se encuentran en la <i>Cámara Mexicana de la Industria de la Construcción</i> (CMIC) sede Chilpancingo de los Bravo, Estado de Guerrero, México. 
+            <a href="https://drive.google.com/file/d/1TprCpqE5tGO5qEIlSbK1zqZH-YqN60Pa/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2015"><strong>Certificación <i>HSK 1</strong> en idioma chino</i><br>emitido por el <i>Instituto Confucio</i> a través del <i>Instituto Cultural Chino Huaxia A.C.</i> con ubicación en Delegación Benito Juárez, Distrito Federal, México. 
+            <a href="https://drive.google.com/file/d/1toRa_Guppq0FKJu-9ur2E83aO3ZwebCW/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2015"><strong>Diploma <i>Estudio del idioma chino</strong></i><br>impartido por el <i>Centro de Educación Internacional</i> de la <i>Universidad de Artes y Ciencias de Shaoxing</i> con ubicación en Shaoxing, Zhejiang, República Popular China. 
+            <a href="https://drive.google.com/file/d/1SnqWso6Mgp3Dekn529MXn4UydLONPrut/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2016"><strong>Certificación <i>Microsoft Office Specialist for Office PowerPoint 2010</strong></i><br>emitido por <i>Microsoft</i> a través de la <i>Universidad Americana de Acapulco</i> plantel Chilpancingo de los Bravo, Estado de Guerrero, México. 
+            <a href="https://drive.google.com/file/d/1bgUDG7tWG3FG2DZ4-sdQEw0PqllqmLVB/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2017"><strong>Certificación <i>DELF A1</strong> en idioma francés</i><br>emitido por el <i>Ministerio [Francés] de Educación Nacional</i> a través de la <i>Escuela Nacional Colegio de Ciencias y Humanidades</i> plantel Oriente con ubicación en Delegación Iztapalapa, Ciudad de México, México. 
+            <a href="https://drive.google.com/file/d/14nDnH01aYxzxP48tzPgEw6eGlNMrybB_/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2018"><strong>Técnico especializado nivel bachillerato en <i>Sistemas computacionales y desarrollo de software</strong> con lenguajes de programación C y Visual Basic</i><br>emitido por la <i>Universidad Nacional Autónoma de México</i> a través de la <i>Escuela Nacional Colegio de Ciencias y Humanidades</i> plantel Oriente con ubicación en Delegación Iztapalapa, Ciudad de México, México. 
+            <a href="https://drive.google.com/file/d/1-t67itaJ8Vg3jBV2l47rCZA0JAMay5Us/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2018"><strong>Diplomado <i>Introducción al Audio Profesional</strong> con Avid Pro Tools</i><br>impartido por la escuela de enseñanza superior <i>Sala de Audio</i> con ubicación en Delegación Cuauhtémoc, Ciudad de México, México. 
+            <a href="https://drive.google.com/file/d/1EL1b4R8fOu-eBdKFNqbzXfZ90QWM0J7n/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2019"><strong>Curso Taller <i>México Nación Multicultural</strong></i><br>ofrecido por el programa universitario <i>Estudios de la Diversidad Cultural y la Interculturalidad</i> e impartido en la <i>Escuela Nacional Colegio de Ciencias y Humanidades</i> plantel Oriente con ubicación en Delegación Iztapalapa, Ciudad de México, México. 
+            <a href="https://drive.google.com/file/d/14So5Q9iXTwFsaBBR5YCnoUH8akcXySns/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2019"><strong>Bachillerato <i></strong></i><br>acreditado en la escuela de enseñanza medio superior <i>Escuela Nacional Colegio de Ciencias y Humanidades</i> plantel Oriente con ubicación en Delegación Iztapalapa, Ciudad de México, México. 
+            <a href="https://drive.google.com/file/d/1xMM7yVSvE7LQAxK5Y9v2arn0SoSn7-TC/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2019"><strong>Curso <i>Astrofísica: ayer, hoy y siempre</strong></i><br>ofrecido a través del programa <i>Grandes Maestros</i>, emitido por la <i>Coordinación de Difusión Cultural de la Universidad Nacional de México</i> e impartido en la <i>Sala Carlos Chávez del Centro Cultural Universitario</i>. 
+            <a href="https://drive.google.com/file/d/170VOK0GL6aJ37V_5brUULM6dWX1_Od6e/view?usp=sharing">Véase documento PDF</a>.</li>
+        <li value="2020"><strong>Licenciatura en <i>Filosofía</strong> (truncada)</i><br><i>Facultad de Filosofía y Letras</i> de la <i>Universidad Nacional Autónoma de México</i>.</li>
+        <li value="2022"><strong>Curso <i>Taller de Herramientas Digitales Libres para filósofos</strong></i><br>impartido por el <i>Laboratorio de Investigación y Desarrollo de Software Libre</i> (LIDSOL) realizado en la <i>Unidad de Posgrado de la Universidad Nacional Autónoma de México</i>. 
+            <!-- <a href="">Véase documento PDF</a>. --></li>
+        <li value="2024"><strong>Curso <i>Full Stack Developer Java</strong> con Spring Boot</i><br>ofrecido a través del programa <i>Becas Santander</i> e impartido en línea por <i>BEDU</i>. 
+            <a href="https://www.acreditta.com/credential/f98aa512-ca13-46ec-8d5c0d8a076b13da">Véase reconocimiento de acreditación e insignia digital</a>.<br><img src="https://www.acreditta.com/_next/image?url=https%3A%2F%2Facreditta-rutas-prod.s3.amazonaws.com%2Fmedia%2Fpublic%2Fbadge_templates%2Fimages%2F1678_badge_template_ec39c235-5b36-47f4-927f-3d1d0137827d%2Fmedium.png%3Ftime%3D1750672272900&w=1920&q=75"></li>
+        <li value="2024"><strong>Certificación <i>Huawei Cloud Certified Developer Associate</strong></i><br>emitido por <i>Huawei</i>. 
+            <!-- <a href="./TODO.pdf">Véase documento PDF</a>.--></li> 
+        <li value="2025"><strong>Licenciatura en <i>Ingeniería en Tecnologías y sistemas de información</strong> (en curso)</i><br><i>Universidad del Valle de México Campus en Línea</i>.</li>
+    </ol>
+
+    <h4>Certificaciones de plataforma de educación virtual</h4>
+    <ol>
+        <li value="2025"><i><strong>Python for Data Science</strong></i><br>emitido por <i>IBM</i> a través del programa de entrenamiento <i>IBM: Skills Network</i> e impartido en la plataforma <i>Cognitive Class</i>. <a href="https://courses.cognitiveclass.ai/certificates/fc2025834b464a6d82f9a36bed57f50a">Véase certificado digital</a>. <a href="https://www.credly.com/badges/94697161-8ace-4954-8813-86bd5b1b8749">Veáse insignia digital</a>.</li>
+        <li value="2025"><i><strong>Data Visualization with Python</strong></i><br>emitido por <i>IBM</i> a través del programa de entrenamiento <i>IBM: Skills Network</i> e impartido en la plataforma <i>Cognitive Class</i>. <a href="https://courses.cognitiveclass.ai/certificates/54158b2b04374a0eb18df3713bb2cf24">Véase certificado digital</a>. <a href="https://www.credly.com/badges/49cabf7b-96e2-48b3-a112-e96f3f144fd7">Veáse insignia digital</a>.</li>
+        <li value="2025"><i><strong>Data Analysis with Python</strong></i><br>emitido por <i>IBM</i> a través del programa de entrenamiento <i>IBM: Skills Network</i> e impartido en la plataforma <i>Cognitive Class</i>. <a href="https://courses.cognitiveclass.ai/certificates/b2bddbaf61e047db8c15fa55598967f6">Véase certificado digital</a>. <a href="https://www.credly.com/badges/4413504b-d2dd-47c3-82f1-cc9ac0c2e35a">Veáse insignia digital</a>.</li>
+        <li value="2025"><i><strong>Cisco Certified Network Associate (CCNA): Redes Empresariales, Seguridad y Automatización</strong></i><br>emitido por <i>Cisco</i> a través del programa y plataforma <i>Cisco Networking Academy</i>. <a href="https://www.credly.com/badges/c8e330c0-1060-40d7-a8a8-ef26438717c4">Veáse insignia digital</a>.</li>
+        <li value="2025"><i><strong>Analizar e incrementar - Parte 1</strong></i><br>emitido por el <i>Tecnológico de Monterrey</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/13788ba51d9b6370caf859d41f6dbf4e">Veáse certificado digital</a>.</li>
+        <li value="2025"><i><strong>Incrementar - Parte 2 y Controlar</strong></i><br>emitido por el <i>Tecnológico de Monterrey</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/16dea1c03f1d0bf4eea6958192d82e75">Veáse certificado digital</a>.</li>
+        <li value="2025"><i><strong>Six Sigma Principles</strong></i><br>emitido por <i>Kennesaw State University</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/336a1c984ec7766f330407c460796ec3">Veáse certificado digital</a>.</li>
+        <li value="2025"><i><strong>Six Sigma Tools for Define and Measure</strong></i><br>emitido por <i>Kennesaw State University</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/d9b345c598afe9426ac303d5cd4ccaf4">Veáse certificado digital</a>.</li>
+        <li value="2025"><i><strong>Six Sigma Tools for Analyze</strong></i><br>emitido por <i>Kennesaw State University</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/99a3a0adb10c68bdfae0c53c1559e6f8">Veáse certificado digital</a>.</li>
+        <li value="2025"><i><strong>Six Sigma Tools for Improve and Control</strong></i><br>emitido por <i>Kennesaw State University</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/dd8876eefa14842357bb7304bd9a4265">Veáse certificado digital</a>.</li>
+        <li value="2024"><i><strong>Google Cloud Fundamentals: Core Infrastructure</strong></i><br>emitido por <i>Google Cloud Training</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/a9acf68969f339bc9c340f5ef3d80f97">Veáse certificado digital</a>.</li>
+        <li value="2024"><i><strong>Essential Google Cloud Infrastructure: Foundation</strong></i><br>emitido por <i>Google Cloud Training</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/3549648bc1981c47b2cb3ce525909f46">Veáse certificado digital</a>.</li>
+        <li value="2024"><i><strong>Essential Google Cloud Infrastructure: Core Services</strong></i><br>emitido por <i>Google Cloud Training</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/d2cdda0710e644a95f63ce20db6946c2">Veáse certificado digital</a>.</li>
+        <li value="2024"><i><strong>Elastic Google Cloud Infrastructure: Scaling and Automation</strong></i><br>emitido por <i>Google Cloud Training</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/117197fb247c88b8783b1c5fd9eb0e3d">Veáse certificado digital</a>.</li>
+        <li value="2024"><i><strong>Reliable Google Cloud Infrastructure: Design and Process</strong></i><br>emitido por <i>Google Cloud Training</i> a través de la plataforma <i>Coursera</i>. <a href="https://coursera.org/share/3de74f5d482b04b6edd137373560b6a7">Veáse certificado digital</a>.</li>
+    </ol>
+
+    <h4>Línea de Tiempo</h4>
+    <p>Nótese no se han incluido todos los eventos</p>
+    <div id="linea-de-tiempo"></div>
+
+    <!-- ENLACES -->
+    <a style="visibility: collapse;" name="enlaces"></a>
+    <h3>Enlaces</h3>
+    <ul>
+        <li>Perfil de GitHub:<br><a href="https://github.com/sergiogarcialopez">https://github.com/sergiogarcialopez</a></li>
+        <li>Perfil de LinkedIn:<br><a href="https://www.linkedin.com/in/sergio-g-031359306/">https://www.linkedin.com/in/sergio-g-031359306/</a></li>
+        <li>Perfil de HackerRank:<br><a href="https://www.hackerrank.com/profile/SGL_SSS/">https://www.hackerrank.com/profile/SGL_SSS/</a></li>
+
+    </ul>
+
+    <!-- STACK -->
+    <a style="visibility: collapse;" name="stack"></a>
+    <h3>Lenguajes de programación/codificación y tecnologías (APIs, bibliotecas de funciones, <i>frameworks</i>, etc.) que hacen posible esta página</h3>
+    <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Biblioteca JavaScript de visualización de datos <i>Google Chart</i> accedida como API (lo que hace posible visualizar la línea de tiempo sobre mi trayectoria de vida a.k.a <i>Curriculum Vitae</i>)</li>
+    </ul>
+    
+    <!-- FLUJO CI/CD -->
+    <a style="visibility: collapse;" name="ci_cd"></a>
+    <h3>Flujo CI/CD que hace posible el despliegue y actualización continuos de esta página web</h3>
     <p>
         Acerca del proceso para efectuar los pasos de integración/despliegue continuos i.e. la utilización de <i>GitHub</i> como repositorio de almacenamiento del presente archivo HTML y su actualización continua a través de <i>GitHub Actions</i> cuya configuración consiste en el envío de cambios al sevidor web de recursos estáticos <i>Firebase</i> tras cada operación <i>Git</i>.
+        <a href="./documentaciones/acerca-de-flujo-despliegue-e-integracion-continuos.html">Véase para mayor información</a>
     </p>
-    <a href="./documentaciones/acerca-de-flujo-despliegue-e-integracion-continuos.html">Véase documentación paso a paso para mayor información</a>
+
+
+    <br style="height: 1rem;">
 </body>
 </html>
