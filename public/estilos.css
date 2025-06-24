@@ -14,14 +14,14 @@
 }
 
 /* -- FONDO -- */
-html {
+/* html {
     background-color: var(--color-de-fondo-encabezado-claro);
 }
 @media (prefers-color-scheme: dark) {
     html {
         background-color: var(--color-de-fondo-encabezado-oscuro);
     }
-}
+} */
 
 /* -- CUERPO -- */
 body {
@@ -190,7 +190,11 @@ a:hover {
 }
 
 img {
-    width: 10em;
+    width: 6em;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    padding-top: 1rem;
+    display: block;
 }
 
 /* -- CAJONERA (PANEL) LATERAL IZQUIERDA -- */
