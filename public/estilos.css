@@ -1,6 +1,6 @@
 /* -- VARIABLES -- */
 :root {
-    --margen-texto: 10%;
+    --margen-texto: 3vw;
     --color-primario: #007bff;
     --color-secundario: #6c757d;
     --color-de-fondo-claro: #ffffff;
@@ -169,12 +169,12 @@ h4 {
 ul,
 ol {
     margin-left: var(--margen-texto);
-    margin-right: var(--margen-texto);
+    /* margin-right: var(--margen-texto); */
     margin-bottom: 1rem;
 }
 
 li {
-    margin-right: var(--margen-texto);
+    /* margin-right: var(--margen-texto); */
     margin-left: var(--margen-texto);
     margin-bottom: 0.5rem;
     font-family: var(--fuente-cuerpo);
